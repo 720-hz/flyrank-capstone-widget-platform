@@ -1,0 +1,22 @@
+{
+  "name": "flyrank-capstone-widget-platform",
+  "version": "1.0.0",
+  "description": "Embeddable widget & lead-capture platform — a customer defines a widget, gets one <script> tag, and the public internet's submissions come back validated, spam-filtered, enriched, and dashboarded.",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "seed": "node seed.js",
+    "test-site": "node test-site/serve.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.4",
+    "express": "^5.2.1",
+    "express-rate-limit": "^8.7.0",
+    "jsonwebtoken": "^9.0.3",
+    "zod": "^4.6.5"
+  }
+}
