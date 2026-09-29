@@ -1,0 +1,54 @@
+name: flyrank-capstone-widget-platform
+track: FlyRank Internship - Backend Track
+capstone: Embeddable Widget & Lead-Capture Platform
+
+run: npm install && npm start
+seed: npm run seed
+test: npm run test-site
+
+base_url: http://localhost:3020
+
+endpoints:
+  # Authenticated (owner)
+  - method: POST
+    path: /auth/register
+  - method: POST
+    path: /auth/login
+  - method: POST
+    path: /widgets
+  - method: GET
+    path: /widgets
+  - method: GET
+    path: /widgets/:id
+  - method: PUT
+    path: /widgets/:id
+  - method: DELETE
+    path: /widgets/:id
+  - method: GET
+    path: /dashboard/summary
+  - method: GET
+    path: /widgets/:id/stats
+  - method: GET
+    path: /widgets/:id/submissions
+
+  # Public, cached
+  - method: GET
+    path: /widget/v1/widget.js
+  - method: GET
+    path: /widgets/:id/config
+
+  # Public, protected
+  - method: POST
+    path: /submissions
+  - method: OPTIONS
+    path: /submissions
+
+  # Health
+  - method: GET
+    path: /health
+
+demo:
+  widget_id: demo0001
+  customer_email: demo@flyrank.dev
+  customer_password: demo12345
+  test_site: http://localhost:4021 (npm run test-site)
